@@ -1,0 +1,11 @@
+---
+title: "Stat 380 Project"
+author: "[Ann DeFrancesco, Adam Whiteside, Madeleine Willson]"
+toc: true
+title-block-banner: true
+title-block-style: default
+format: html
+editor: 
+  markdown: 
+    wrap: 72
+---
