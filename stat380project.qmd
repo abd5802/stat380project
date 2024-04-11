@@ -22,6 +22,7 @@ library(tidyverse)
 ```{r}
 #load and read our csv file
 flightdelay <- read.csv("~/Downloads/full_data_flightdelay.csv")
+head(flightdelay)
 ```
 
 ```{r}
@@ -30,25 +31,11 @@ flightdelay <- flightdelay %>%
   rename_all(tolower) %>% 
   na.omit() %>% 
   select(month, day_of_week, dep_del15, dep_time_blk, distance_group, segment_number, carrier_name, departing_airport, previous_airport, prcp, snow, tmax, awnd) %>% 
-  rename(delay = dep_del15, dep_time = dep_time_blk, distance = distance_group, trip_segment = segment_number, precipitation = prcp, max_temp = tmax, wind = awnd) 
+  rename(delay = dep_del15, dep_time = dep_time_blk, distance = distance_group, trip_segment = segment_number, airline = carrier_name, precipitation = prcp, max_temp = tmax, wind = awnd) 
   
 
 head(flightdelay)
-```
-
-View
-```{r}
-str(flightdelay)
-```
-
-Summary
-```{r}
 summary(flightdelay)
-```
-
-Preprocessing
-```{r}
-flightdelay <- flightdelay %>% na.omit()
 ```
 
 Visualizations
